@@ -4,7 +4,7 @@ After the installation of Prometheus & NodeExporter, We need to add NodeExporter
 
 2- - job_name: node_export
     static_configs:
-      - targets: ["localhost:9100"] #NodeExporter exposed on port mo 9100
+      - targets: ["localhost:9100"] #NodeExporter exposed on port no 9100
 
 3- Restart the prometheus service.
 
