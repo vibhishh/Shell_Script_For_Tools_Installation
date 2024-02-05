@@ -16,7 +16,7 @@ rm -rf node_exporter*
 node_exporter --version
 
 #node_exporter.service
-#sudo vim /etc/systemd/system/node_exporter.service
+#sudo vim /etc/systemd/system/node_exporter.service [copy from Unit to multi user target and paste in this file]
 
 [Unit]
 Description=Node Exporter
