@@ -20,18 +20,15 @@ node_exporter --version
 
 [Unit]
 Description=Node Exporter
-Wants=network-online.target
-After=network-online.target
-StartLimitIntervalSec=500
-StartLimitBurst=5
+After=network.target
+
 [Service]
 User=node_exporter
 Group=node_exporter
 Type=simple
+ExecStart=/usr/local/bin/node_exporter
 Restart=on-failure
-RestartSec=5s
-ExecStart=/usr/local/bin/node_exporter \
-    --collector.logind
+
 [Install]
 WantedBy=multi-user.target
 
