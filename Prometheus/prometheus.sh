@@ -21,11 +21,11 @@ sudo mv prometheus.yml /etc/prometheus/prometheus.yml
 
 sudo chown -R prometheus:prometheus /etc/prometheus/ /data/
 
+prometheus --version
+
 #You can delete the archive and a Prometheus folder when you are done.
 #cd
 #rm -rf prometheus-2.47.1.linux-amd64.tar.gz
-
-prometheus --version
 
 #sudo vim /etc/systemd/system/prometheus.service [copy all upto multi-user.target and paste to prometheus.service file]
 
