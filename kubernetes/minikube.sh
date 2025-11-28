@@ -12,5 +12,7 @@ sudo mv kubectl /usr/local/bin/
 sudo usermod -aG docker $USER && newgrp docker
 kubectl version --client
 
-minikube start --driver=docker
+sudo sysctl fs.protected_regular=0
+
+minikube start --driver=docker --force
 minikube status
