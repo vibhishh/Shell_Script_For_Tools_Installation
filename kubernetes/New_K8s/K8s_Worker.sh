@@ -56,3 +56,6 @@ sudo apt-get install -y socat ebtables ethtool
 
 #Now Paste the token at worker node which we copied from the master node with append at the end of the join command [--v=5]
 kubeadm reset pre-flight checks #If any error occurs
+
+#sudo kubeadm join 172.31.30.224:6443 --token ndq1c5.povq6bvgquspbj0d         --discovery-token-ca-cert-hash sha256:4999254cb96456a1e8c0d9503
+76e3bd51d205ea4725bbf2796aca337e181768a --v=5  COPY THAT TYPE OF COMMAND FROM MASTER NODE AND RUN THIS CMD TO WORKER NODE.
