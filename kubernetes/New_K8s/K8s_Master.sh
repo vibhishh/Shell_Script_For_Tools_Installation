@@ -57,6 +57,8 @@ sudo apt-get install -y socat ebtables ethtool
 #Initialize Kubernetes Control Plane
 sudo kubeadm init --pod-network-cidr=192.168.0.0/16 --apiserver-advertise-address=$PRIVATE_IP
 
+#Open Port 6443 at Master Node.
+
 #Set up kubectl
 mkdir -p $HOME/.kube
 sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
@@ -72,3 +74,7 @@ kubectl get pods -A
 #Verify Kubernetes Cluster Status
 kubectl get nodes
 
+#Open Port 10250 on BOTH master & worker
+
+#Test Network
+nc -vz 172.31.29.226 10250 #Worker's Private IP
