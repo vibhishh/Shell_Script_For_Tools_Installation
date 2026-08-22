@@ -1,4 +1,4 @@
-#TrivyInstallationCommands_are_given_below:
+#TrivyInstallationCommands:
 #!bin/bash
 sudo apt-get install wget apt-transport-https gnupg lsb-release -y
 wget -qO - https://aquasecurity.github.io/trivy-repo/deb/public.key | gpg --dearmor | sudo tee /usr/share/keyrings/trivy.gpg > /dev/null
